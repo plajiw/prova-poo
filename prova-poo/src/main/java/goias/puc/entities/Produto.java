@@ -55,6 +55,9 @@ public class Produto {
     }
 
     public void setQuantidade(int quantidade) {
+        if (quantidade < 0)
+            throw new IllegalArgumentException("O valor unitário não pode ser negativo.");
+
         this.quantidade = quantidade;
     }
 

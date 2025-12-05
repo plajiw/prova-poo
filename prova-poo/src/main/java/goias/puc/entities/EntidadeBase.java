@@ -16,7 +16,14 @@ public abstract class EntidadeBase {
     }
 
     public void setNome(String nome) {
+        if(nome.length() < 4)
+        {
+            System.out.println("O nome precisa conter mais de 4 caracteres.");
+            return;
+        }
+
         this.nome = nome;
+
     }
 
     public String getTelefone() {
